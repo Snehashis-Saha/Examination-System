@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .login-body{
+            background-color: #85C1E9;
+        }
+        .login-form{
+            background-color: #A2D9CE;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup - TestMint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="login-body flex items-center justify-center min-h-screen">
+    <div class="login-form max-w-md max-w-md p-6 rounded-lg shadow-md">
+        <h2 id="formTitle" class="text-2xl font-bold text-center text-gray-800">Login to TestMint</h2>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="mt-4">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Email</label>
+            <input type="email" class="max-w-md px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
+            
+            <label class="block mt-4 mb-2 text-sm font-medium text-gray-700">Password</label>
+            <input type="password" class="max-w-md px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password">
+            
+            <button type="submit" class="max-w-md mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Login</button>
+            
+            <p class="mt-3 text-center text-sm text-gray-600">
+                Don't have an account? <a href="#" class="text-blue-500 hover:underline" onclick="toggleForm()">Sign Up</a>
+            </p>
+        </form>
+
+        <!-- Signup Form (Hidden by Default) -->
+        <form id="signupForm" class="mt-4 hidden">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" class="max-w-md px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
+
+            <label class="block mt-4 mb-2 text-sm font-medium text-gray-700">Email</label>
+            <input type="email" class="max-w-md px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
+
+            <label class="block mt-4 mb-2 text-sm font-medium text-gray-700">Password</label>
+            <input type="password" class="max-w-md px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Create a password">
+            
+            <button type="submit" class="w-full mt-4 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Sign Up</button>
+            
+            <p class="mt-3 text-center text-sm text-gray-600">
+                Already have an account? <a href="#" class="text-blue-500 hover:underline" onclick="toggleForm()">Login</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            document.getElementById("loginForm").classList.toggle("hidden");
+            document.getElementById("signupForm").classList.toggle("hidden");
+            document.getElementById("formTitle").innerText = document.getElementById("signupForm").classList.contains("hidden") ? "Login to TestMint" : "Create an Account";
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
